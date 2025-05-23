@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Битва</title>
+    <link rel="stylesheet" href="battle.css">
+</head>
+<body>
+    <div class="background"></div>
+    <img src="back-button.png" class="back-button"  onclick="window.location.href='index.html'" alt="Назад">
+    <div class="battle-screen">
+        <div class="enemy-pokemon">
+            <h2 class="pokemon-name" id="enemyName">Противник</h2>
+            <img src="enemy.png" id="enemyImage" class="pokemon-sprite" alt="Вражеский покемон">
+            <div class="health-container">
+                <span>HP:</span> <span id="enemyHP">650</span>
+                <div class="health-bar"><div id="enemyHPBar" class="hp"></div></div>
+            </div>
+        </div>
+
+        <div class="player-pokemon">
+            <h2 class="pokemon-name" id="playerName">Ваш покемон</h2>
+            <img src="" id="playerImage" class="pokemon-sprite" alt="Ваш покемон">
+            <div class="health-container">
+                <span>HP:</span> <span id="playerHP"></span>
+                <div class="health-bar"><div id="playerHPBar" class="hp"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="battleLog" class="battle-log"></div>
+    <div class="battle-menu">
+        <button id="attackBtn" class="btn">Атака</button>
+        <button id="defendBtn" class="btn">Защита</button>
+        <button id="abilityBtn" class="btn">Способность</button>
+        <button id="evolveBtn" class="btn">Эволюция</button>
+        <button id="waveAttackBtn" class="btn hidden">Атака волной</button>
+        <button id="waterHideBtn" class="btn hidden">Водная маскировка</button>
+        <button id="fireBallBtn" class="btn hidden">Огненный шар</button>
+        <button id="fireThornsBtn" class="btn hidden">Огненные шипы</button>
+        <button id="thunderboltBtn" class="btn hidden">Удар молнии</button>
+        <button id="chargeBtn" class="btn hidden">Накопить заряд</button>
+    </div>
+
+    <script src="GameManager.js" type="module"></script>
+</body>
+</html>

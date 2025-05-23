@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script type="module" src="save.js"></script>
+</head>
+<body>
+    <img src="back-button.png" class="back-button" onclick="goBack()" alt="Назад">
+    <div class="container">
+        <div class="cards">
+            <div class="card" onclick="selectPokemon('fire')">
+                <img src="charm.png" alt="Charmander">
+                <p>Выбрать огненного покемона</p>
+            </div>
+            <div class="card" onclick="selectPokemon('water')">
+                <img src="sqr.png" alt="Squirtle">
+                <p>Выбрать водного покемона</p>
+            </div>
+            <div class="card" onclick="selectPokemon('electric')">
+                <img src="pikachu.png" alt="Pikachu">
+                <p>Выбрать электрического покемона</p>
+            </div>
+        </div>
+        <div class="pokemon-form" id="pokemonForm" style="display: none;">
+            <img id="pokemonImage" src="" alt="Выбранный покемон">
+            
+            <input type="text" id="name" placeholder="Имя покемона" oninput="validateForm()">
+            <input type="number" id="health" placeholder="Здоровье" min="0" oninput="validateForm()">
+            <input type="number" id="damage" placeholder="Урон" min="0" oninput="validateForm()">
+            
+            <input type="number" id="fireAttack" placeholder="Урон огнём" min="0" style="display: none;" oninput="validateForm()">
+            <input type="number" id="fireResist" placeholder="Сопротивление огню" min="0" style="display: none;" oninput="validateForm()">
+            <input type="number" id="waterAttack" placeholder="Урон водой" min="0" style="display: none;" oninput="validateForm()">
+            <input type="number" id="waterResist" placeholder="Сопротивление воде" min="0" style="display: none;" oninput="validateForm()">
+            <input type="number" id="electricCharge" placeholder="Электрический заряд" min="0" style="display: none;" oninput="validateForm()">
+            <input type="number" id="electricPower" placeholder="Электрическая мощь" min="0" style="display: none;" oninput="validateForm()">
+
+            <button id="createButton" class="btn" disabled>Создать</button>
+        </div>
+    </div>
+</body>
+</html>
